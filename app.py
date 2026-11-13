@@ -109,7 +109,7 @@ def analyse(text: str) -> dict:
 
 
 def log(event, detail=""):
-    st.session_state.audit.append({"Time": datetime.now().strftime("%H:%M:%S"),
+    st.session_state.audit.append({"Time": datetime.utcnow().strftime("%H:%M:%S") + " UTC",
                                    "Event": event, "Detail": detail})
 
 
